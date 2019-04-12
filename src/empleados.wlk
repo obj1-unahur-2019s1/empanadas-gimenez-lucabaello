@@ -4,8 +4,24 @@ object galvan {
 //	var property sueldo = 15000
 
 	var sueldo = 15000
+	var deuda = 0
+	var dinero = 0
 	method sueldo() { return sueldo }
 	method sueldo(nuevoValor) { sueldo = nuevoValor }
+	method gastar(cuanto){ if (dinero>=cuanto){dinero -= cuanto} else 
+		{ if (dinero > 0){deuda += cuanto - dinero dinero = 0} 
+			else { 
+			 deuda += cuanto
+		}}}
+	method totalDinero(){return dinero}
+	method totalDeuda(){return deuda}
+	method cobrarSueldo(){ if (deuda >= sueldo) {deuda -= sueldo}
+		else
+		{
+		 dinero += sueldo - deuda
+		 deuda = 0	
+		 }
+	}
 }
 
 object baigorria {
